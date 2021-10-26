@@ -10,7 +10,7 @@ end
 return require('packer').startup(function(use)
     config = {
         -- Move to lua dir so impatient.nvim can cache it
-        compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
+            compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
     }
 
     -- packer self management
@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
     use 'lewis6991/impatient.nvim'
 
     -- dashboard
-    --use 'glepnir/dashboard-nvim'
+    use 'glepnir/dashboard-nvim'
 
     -- discord rich presence
     use 'andweeb/presence.nvim'
@@ -33,7 +33,8 @@ return require('packer').startup(function(use)
     use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons', config = function() require'nvim-tree'.setup {} end }
 
     -- tabs
-    use 'romgrk/barbar.nvim'
+    --use 'romgrk/barbar.nvim'
+    use 'akinsho/bufferline.nvim'
 
     -- treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -53,6 +54,10 @@ return require('packer').startup(function(use)
     -- snippets
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
+
+    -- git
+    --use 'lewis6991/gitsigns.nvim'
+    use 'TimUntersberger/neogit'
 
     -- colorscheme
     use 'morhetz/gruvbox'

@@ -7,7 +7,7 @@ vim.opt.smartindent	    = true
 vim.opt.relativenumber	= true
 vim.opt.number	        = true
 vim.opt.rnu		        = true
-vim.opt.wrap 		    = true
+vim.opt.wrap 		    = false
 vim.opt.ignorecase	    = true
 vim.opt.swapfile	    = false
 vim.opt.backup	        = true
@@ -22,4 +22,5 @@ vim.opt.autoread	    = true
 vim.opt.mouse           = 'a'
 vim.opt.termguicolors   = true
 vim.opt.errorbells      = false
+vim.opt.iskeyword       :append('-')
 vim.o.completeopt       = "menu,menuone,noselect"
