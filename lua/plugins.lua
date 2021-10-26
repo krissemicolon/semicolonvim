@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
     use 'kyazdani42/nvim-web-devicons'
     use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons', config = function() require'nvim-tree'.setup {} end }
 
+    -- tabs
+    use 'romgrk/barbar.nvim'
+
     -- treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
@@ -24,6 +27,7 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     use 'ray-x/lsp_signature.nvim'
     use 'onsails/lspkind-nvim'
+    use 'glepnir/lspsaga.nvim'
 
     -- completion
     use 'hrsh7th/nvim-compe'

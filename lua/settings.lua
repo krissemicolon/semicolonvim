@@ -19,7 +19,6 @@ vim.opt.history		    = 500
 vim.opt.backup	        = false
 vim.opt.wb		        = false
 vim.opt.autoread	    = true
+vim.opt.mouse           = 'a'
+vim.opt.termguicolors   = true
 vim.o.completeopt       = "menu,menuone,noselect"
-
--- this line still has an error
--- vim.opt.fillchars	    = [[vert:\▏]]

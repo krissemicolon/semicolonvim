@@ -34,6 +34,8 @@ vim.api.nvim_set_keymap('x', 'J', [[:move '>+1<CR>gv-gv']], { noremap = true, si
 -- completion ((s-)tab)
 -- in module: nv-compe
 
--- fuzzy finder
-vim.api.nvim_set_keymap('n', '<Leader>f', 'Telescope find_files', { noremap = true, silent = true})
-
+-- fuzzy finder (L + ff & L + sp & L + fb & L + man)
+vim.api.nvim_set_keymap('n', '<Leader>ff',  ':Telescope find_files<CR>', { noremap = true, silent = true })  -- list & search files
+vim.api.nvim_set_keymap('n', '<Leader>sp',  ':Telescope live_grep<CR>',  { noremap = true, silent = true })  -- search through project
+vim.api.nvim_set_keymap('n', '<Leader>fb',  ':Telescope buffers<CR>',    { noremap = true, silent = true })  -- list & search buffers
+vim.api.nvim_set_keymap('n', '<Leader>man', ':Telescope help_tags<CR>',  { noremap = true, silent = true })  -- search through nvim manual
