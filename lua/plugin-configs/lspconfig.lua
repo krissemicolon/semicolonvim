@@ -1,15 +1,10 @@
 local s = require'lspconfig'
 
+-- lua
+s.sumneko_lua.setup{}
+
 -- python
-s.pyright.setup {}
+s.pyright.setup{}
 
 -- rust
-s.rust_analyzer.setup {
-    settings = { 
-        ["rust-analyzer"] = { 
-            checkOnSave = {
-                command = "clippy"
-            }
-        } 
-    } 
-}
+s.rust_analyzer.setup{}
