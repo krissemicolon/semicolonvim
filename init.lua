@@ -1,3 +1,4 @@
+require('globals')
 require('plugins')
 require('plugin-configs')
 require('keymaps')

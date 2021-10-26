@@ -33,3 +33,7 @@ vim.api.nvim_set_keymap('x', 'J', [[:move '>+1<CR>gv-gv']], { noremap = true, si
 
 -- completion ((s-)tab)
 -- in module: nv-compe
+
+-- fuzzy finder
+vim.api.nvim_set_keymap('n', '<Leader>f', 'Telescope find_files', { noremap = true, silent = true})
+
