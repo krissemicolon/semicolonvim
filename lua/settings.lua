@@ -21,4 +21,5 @@ vim.opt.wb		        = false
 vim.opt.autoread	    = true
 vim.opt.mouse           = 'a'
 vim.opt.termguicolors   = true
+vim.opt.errorbells      = false
 vim.o.completeopt       = "menu,menuone,noselect"

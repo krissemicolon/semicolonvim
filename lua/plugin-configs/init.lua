@@ -1,6 +1,1 @@
-require('plugin-configs/treesitter')
-require('plugin-configs/compe')
-require('plugin-configs/lspkind')
-require('plugin-configs/lspconfig')
-require('plugin-configs/telescope')
-require('plugin-configs/lspsaga')
+require('plugin-configs/*')

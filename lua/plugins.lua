@@ -8,7 +8,22 @@ end
 --]]
 
 return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
+    config = {
+        -- Move to lua dir so impatient.nvim can cache it
+        compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
+    }
+
+    -- packer self management
+    use 'wbthomason/packer.nvim' 
+
+    -- startup optimization (~47ms -> ~16ms)
+    use 'lewis6991/impatient.nvim'
+
+    -- dashboard
+    --use 'glepnir/dashboard-nvim'
+
+    -- discord rich presence
+    use 'andweeb/presence.nvim'
 
     -- libraries
     use 'nvim-lua/plenary.nvim'
