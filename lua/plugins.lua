@@ -10,15 +10,31 @@ end
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
+    -- libraries
+    use 'nvim-lua/plenary.nvim'
+
     -- file tree
     use 'kyazdani42/nvim-web-devicons'
     use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons', config = function() require'nvim-tree'.setup {} end }
+
+    -- treesitter
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- lsp
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/nvim-compe'
+
+    -- fzf
+    use 'nvim-telescope/telescope.nvim'
+
+    -- snippets
+    use 'hrsh7th/vim-vsnip'
+    use 'hrsh7th/vim-vsnip-integ'
+
+    -- colorscheme
+    use 'morhetz/gruvbox'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
