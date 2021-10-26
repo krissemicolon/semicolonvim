@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
 
     -- lsp
     use 'neovim/nvim-lspconfig'
-    use 'lsp_signature.nvim'
+    use 'ray-x/lsp_signature.nvim'
     use 'onsails/lspkind-nvim'
 
     -- completion
