@@ -1,0 +1,5 @@
+require('plugin-configs/treesitter')
+require('plugin-configs/compe')
+require('plugin-configs/lspkind')
+require('plugin-configs/lspconfigs')
+require('plugin-configs/telescope')

@@ -31,11 +31,5 @@ vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', { noremap = true, sile
 vim.api.nvim_set_keymap('x', 'K', [[:move '<-2<CR>gv-gv']], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('x', 'J', [[:move '>+1<CR>gv-gv']], { noremap = true, silent = true })
 
--- tab completion
---vim.api.nvim_set_keymap('i', '<expr><TAB>', [[pumvisible() ? "\<C-n>" : "\<TAB>"]], { noremap = true, silent = true })
-
 -- completion ((s-)tab)
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+-- in module: nv-compe

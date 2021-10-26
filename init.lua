@@ -1,8 +1,5 @@
 require('plugins')
+require('plugin-configs')
 require('keymaps')
 require('settings')
 require('colorscheme')
-
-
-require('nv-cmp')
-require('nv-treesitter')

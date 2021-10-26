@@ -22,8 +22,10 @@ return require('packer').startup(function(use)
 
     -- lsp
     use 'neovim/nvim-lspconfig'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
+    use 'lsp_signature.nvim'
+    use 'onsails/lspkind-nvim'
+
+    -- completion
     use 'hrsh7th/nvim-compe'
 
     -- fzf
