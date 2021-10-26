@@ -4,9 +4,6 @@
 [submodule "ls/rust"]
 	path = ls/rust
 	url = https://github.com/rust-analyzer/rust-analyzer
-[submodule "ls/pyright"]
-	path = ls/pyright
-	url = https://github.com/microsoft/pyright
 [submodule "ls/python"]
 	path = ls/python
 	url = https://github.com/microsoft/pyright
