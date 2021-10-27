@@ -2,6 +2,12 @@
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 
+-- close window (L + L)
+vim.api.nvim_set_keymap('n', '<Leader><Leader>', ':q<CR>', { noremap = true, silent = true })
+
+-- write changes (L + w)
+vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
+
 -- no highlighting (L + h)
 vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true })
 

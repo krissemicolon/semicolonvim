@@ -24,3 +24,4 @@ vim.opt.termguicolors   = true
 vim.opt.errorbells      = false
 vim.opt.iskeyword       :append('-')
 vim.o.completeopt       = "menu,menuone,noselect"
+vim.opt.background      = "light"
