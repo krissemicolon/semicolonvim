@@ -1,2 +1,2 @@
 -- language servers path
-lspath = ""
+lspath = "~/.config/nvim/ls"
