@@ -1,3 +1,3 @@
 vim.cmd([[
-    command! Config execute ":e ~/.config/nvim"
+    command! Config execute ":e ]] .. configpath .. [["
 ]])
