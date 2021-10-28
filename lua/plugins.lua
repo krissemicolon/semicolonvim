@@ -19,6 +19,13 @@ return require('packer').startup(function(use)
     -- startup optimization (~47ms -> ~16ms)
     use 'lewis6991/impatient.nvim'
 
+    -- misc
+    use 'antoinemadec/FixCursorHold.nvim'   -- otimizes cursor hold bug
+    use { -- view keymaps
+        'AckslD/nvim-whichkey-setup.lua',
+        requires = {'liuchengxu/vim-which-key'},
+    }
+
     -- dashboard
     use 'glepnir/dashboard-nvim'
 
@@ -32,7 +39,10 @@ return require('packer').startup(function(use)
     use 'kyazdani42/nvim-web-devicons'
     use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons', config = function() require'nvim-tree'.setup {} end }
 
-    -- tabs
+    -- terminal
+    use 'akinsho/toggleterm.nvim'
+
+    -- tabs/buffers
     -- alternatives: ['romgrk/barbar.nvim']
     use 'akinsho/bufferline.nvim'
 
@@ -44,6 +54,8 @@ return require('packer').startup(function(use)
     use 'ray-x/lsp_signature.nvim'
     use 'onsails/lspkind-nvim'
     use 'glepnir/lspsaga.nvim'
+    use 'folke/trouble.nvim'
+    use 'williamboman/nvim-lsp-installer'
 
     -- completion
     use 'hrsh7th/nvim-compe'
@@ -51,11 +63,14 @@ return require('packer').startup(function(use)
     -- fzf
     use 'nvim-telescope/telescope.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
-
+    use 'ahmedkhalf/project.nvim'
 
     -- snippets
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
+
+    -- commenting
+    use 'terrortylor/nvim-comment'
 
     -- git
     use 'lewis6991/gitsigns.nvim'

@@ -37,9 +37,6 @@ vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', { noremap = true, sile
 vim.api.nvim_set_keymap('x', 'K', [[:move '<-2<CR>gv-gv']], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('x', 'J', [[:move '>+1<CR>gv-gv']], { noremap = true, silent = true })
 
--- completion ((s-)tab)
--- in module: nv-compe
-
 -- fuzzy finder (L + ff & L + sp & + fb & L + man & L + lo & L + qf)
 vim.api.nvim_set_keymap('n', '<Leader>ff',  ':Telescope find_files<CR>', { noremap = true, silent = true })  -- list & search files
 vim.api.nvim_set_keymap('n', '<Leader>sp',  ':Telescope live_grep<CR>',  { noremap = true, silent = true })  -- search through project
@@ -54,3 +51,7 @@ vim.api.nvim_set_keymap('n', '<Leader>d',  ':Dashboard<CR>', { noremap = true, s
 -- neogit (L + gg)
 vim.api.nvim_set_keymap('n', '<Leader>gg',  ':Neogit<CR>',        { noremap = true, silent = true })    -- git overview
 vim.api.nvim_set_keymap('n', '<Leader>gc',  ':Neogit commit<CR>', { noremap = true, silent = true })    -- commit
+
+-- which-key view keymaps
+vim.api.nvim_set_keymap('n', '<Leader>',  ':WhichKey<CR>',        { noremap = true, silent = true })    -- git overview
+

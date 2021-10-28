@@ -18,10 +18,11 @@ vim.g.dashboard_custom_section = {
    a = { description = { "  Explorer          " }, command = "NvimTreeToggle" },
    b = { description = { "  Search            " }, command = "lua require('telescope.builtin').find_files()" },
    c = { description = { "  Source Control    " }, command = "Neogit" },
-   d = { description = { "  Plugins           " }, command = "PackerStatus" },
-   e = { description = { "  Configuration     " }, command = "Config" },
-   f = { description = { "  Colorscheme       " }, command = "lua require('telescope.builtin').colorscheme()" },
-   g = { description = { "  Quit              " }, command = "q" },
+   d = { description = { "  Projects          " }, command = "Telescope projects" },
+   e = { description = { "  Plugins           " }, command = "PackerStatus" },
+   f = { description = { "  Configuration     " }, command = "Config" },
+   g = { description = { "  Colorscheme       " }, command = "lua require('telescope.builtin').colorscheme()" },
+   h = { description = { "  Quit              " }, command = "q" },
 }
 
 -- footer
