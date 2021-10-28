@@ -50,13 +50,15 @@ return require('packer').startup(function(use)
 
     -- fzf
     use 'nvim-telescope/telescope.nvim'
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
 
     -- snippets
     use 'hrsh7th/vim-vsnip'
     use 'hrsh7th/vim-vsnip-integ'
 
     -- git
-    --use 'lewis6991/gitsigns.nvim'
+    use 'lewis6991/gitsigns.nvim'
     use 'TimUntersberger/neogit'
 
     -- colorscheme
