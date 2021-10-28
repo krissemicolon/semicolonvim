@@ -51,7 +51,3 @@ vim.api.nvim_set_keymap('n', '<Leader>d',  ':Dashboard<CR>', { noremap = true, s
 -- neogit (L + gg)
 vim.api.nvim_set_keymap('n', '<Leader>gg',  ':Neogit<CR>',        { noremap = true, silent = true })    -- git overview
 vim.api.nvim_set_keymap('n', '<Leader>gc',  ':Neogit commit<CR>', { noremap = true, silent = true })    -- commit
-
--- which-key view keymaps
-vim.api.nvim_set_keymap('n', '<Leader>',  ':WhichKey<CR>',        { noremap = true, silent = true })    -- git overview
-
