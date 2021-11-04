@@ -78,7 +78,10 @@ return require('packer').startup(function(use)
 
     -- colorscheme
     use 'morhetz/gruvbox'
-    --use 'folke/tokyonight.nvim'
+    use 'gregsexton/Atom'
+    use 'wimstefan/Lightning'
+    use 'haystackandroid/carbonized'
+    use 'https://gitlab.com/yorickpeterse/happy_hacking.vim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
