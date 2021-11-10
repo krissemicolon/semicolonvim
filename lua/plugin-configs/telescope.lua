@@ -21,14 +21,7 @@ require('telescope').setup{
     -- builtin picker
   },
   extensions = {
-      fzf = {
-        fuzzy = true,
-        override_generic_sorter = true,
-        override_file_sorter = true,
-        case_mode = "ignore_case",
-      }
   }
 }
 
-require('telescope').load_extension('fzf')
 require('telescope').load_extension('projects')
