@@ -5,8 +5,8 @@ vim.cmd([[
 
     command! Lsp    execute ":LspInstallInfo"
 
-    command! Light  execute ":set background=light"
-    command! Dark   execute ":set background=dark"
+    command! Light  execute ":set background=light | lua text_selection()"
+    command! Dark   execute ":set background=dark  | lua text_selection()"
 
     command! Tab2   execute ":set tabstop=2 | set softtabstop=2 | set shiftwidth=2"
     command! Tab4   execute ":set tabstop=4 | set softtabstop=4 | set shiftwidth=4"
