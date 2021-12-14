@@ -16,7 +16,7 @@ vim.g.dashboard_custom_header = {
 -- options
 vim.g.dashboard_custom_section = {
    a = { description = { "  Explorer          " }, command = "NvimTreeToggle" },
-   b = { description = { "  Search            " }, command = "lua require('telescope.builtin').find_files()" },
+   b = { description = { "  Search            " }, command = "lua require('telescope.builtin').live_grep()" },
    c = { description = { "  Source Control    " }, command = "Neogit" },
    d = { description = { "  Projects          " }, command = "Telescope projects" },
    e = { description = { "  Plugins           " }, command = "PackerStatus" },
