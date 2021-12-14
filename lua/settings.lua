@@ -25,7 +25,6 @@ vim.opt.termguicolors   = true
 vim.opt.errorbells      = false
 vim.opt.iskeyword       :append('-')
 vim.opt.completeopt     = "menu,menuone,noselect"
-vim.opt.clipboard       = "unnamedplus"
 vim.opt.pumheight       = 10
 vim.opt.showmode        = true
 vim.opt.smartindent     = true
@@ -35,3 +34,6 @@ vim.opt.title           = true
 vim.opt.cursorline      = false
 vim.opt.scrolloff       = 8
 vim.opt.sidescrolloff   = 8
+
+-- don't know how to do this in lua
+vim.cmd("filetype")
