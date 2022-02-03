@@ -34,6 +34,3 @@ vim.opt.title           = true
 vim.opt.cursorline      = false
 vim.opt.scrolloff       = 8
 vim.opt.sidescrolloff   = 8
-
--- don't know how to do this in lua
-vim.cmd("filetype")
