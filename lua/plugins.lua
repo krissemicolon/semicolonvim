@@ -71,6 +71,9 @@ return require('packer').startup(function(use)
     -- commenting
     use 'terrortylor/nvim-comment'
 
+    -- notifications / error messages
+    use 'rcarriga/nvim-notify'
+
     -- git
     use 'lewis6991/gitsigns.nvim'
     use 'TimUntersberger/neogit'

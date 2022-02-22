@@ -1,3 +1,7 @@
+-- changing defaults
+vim.notify = require("notify")
+
+-- importing modules
 require('globals')
 require('plugins')
 require('plugin-configs')
@@ -14,7 +18,6 @@ require('plugin-configs.bufferline')
 require('plugin-configs.neogit')
 require('plugin-configs.impatient')
 require('plugin-configs.lspconfig')
-require('plugin-configs.lspkind')
 require('plugin-configs.lspsaga')
 require('plugin-configs.lsp-installer')
 require('plugin-configs.presence')
@@ -25,6 +28,7 @@ require('plugin-configs.cursorhold')
 require('plugin-configs.trouble')
 require('plugin-configs.project')
 require('plugin-configs.comment')
+require('plugin-configs.notify')
 
 -- TODO: list of plugins yet to configure
 --require('plugin-configs.toggleterm')
