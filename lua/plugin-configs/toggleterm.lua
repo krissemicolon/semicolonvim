@@ -16,7 +16,7 @@ require'toggleterm'.setup{
   start_in_insert = true,
   insert_mappings = true, -- whether or not the open mapping applies in insert mode
   persist_size = true,
-  direction = 'window' -- | 'float', | 'vertical' | 'horizontal' | '
+  direction = 'window', -- | 'float', | 'vertical' | 'horizontal' | '
   close_on_exit = true, -- close the terminal window when the process exits
   shell = vim.o.shell, -- change the default shell
   -- This field is only relevant if direction is set to 'float'
@@ -25,9 +25,9 @@ require'toggleterm'.setup{
     -- see :h nvim_open_win for details on borders however
     -- the 'curved' border is a custom border type
     -- not natively supported but implemented in this plugin.
-    border = 'single' -- | 'double' | 'shadow' | 'curved' | ... other options supported by win open
-    width = <value>,
-    height = <value>,
+    border = 'single', -- | 'double' | 'shadow' | 'curved' | ... other options supported by win open
+    -- width = <value>,
+    -- height = <value>,
     winblend = 3,
     highlights = {
       border = "Normal",

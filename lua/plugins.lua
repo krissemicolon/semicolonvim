@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
     }
 
     -- packer self management
-    use 'wbthomason/packer.nvim' 
+    use 'wbthomason/packer.nvim'
 
     -- startup optimization (~47ms -> ~16ms)
     use 'lewis6991/impatient.nvim'
@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
         'AckslD/nvim-whichkey-setup.lua',
         requires = {'liuchengxu/vim-which-key'},
     }
+    use 'ap/vim-css-color'
 
     -- dashboard
     use 'glepnir/dashboard-nvim'
@@ -57,6 +58,9 @@ return require('packer').startup(function(use)
     use 'folke/trouble.nvim'
     use 'williamboman/nvim-lsp-installer'
 
+    -- formatter
+    use 'sbdchd/neoformat'
+
     -- completion
     use 'hrsh7th/nvim-compe'
 
@@ -80,6 +84,7 @@ return require('packer').startup(function(use)
 
     -- colorscheme
     use 'morhetz/gruvbox'
+    use 'sainnhe/everforest'
     use 'gregsexton/Atom'
     use 'wimstefan/Lightning'
     use 'haystackandroid/carbonized'
