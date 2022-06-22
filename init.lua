@@ -12,7 +12,7 @@ require('highlights')
 require('commands')
 
 require('plugin-configs.tree')
-require('plugin-configs.compe')
+require('plugin-configs.cmp')
 require('plugin-configs.dashboard')
 require('plugin-configs.bufferline')
 require('plugin-configs.neogit')

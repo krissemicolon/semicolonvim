@@ -24,7 +24,7 @@ vim.opt.mouse           = 'a'
 vim.opt.termguicolors   = true
 vim.opt.errorbells      = false
 vim.opt.iskeyword       :append('-')
-vim.opt.completeopt     = "menu,menuone,noselect"
+vim.opt.completeopt     = "menuone,noselect"
 vim.opt.pumheight       = 10
 vim.opt.showmode        = true
 vim.opt.smartindent     = true

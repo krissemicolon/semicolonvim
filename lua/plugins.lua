@@ -7,6 +7,20 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 --]]
 
+local status_ok, packer = pcall(require, "packer")
+if not status_ok then
+  return
+end
+
+-- packer floating window
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
+
 return require('packer').startup(function(use)
     config = {
         -- Move to lua dir so impatient.nvim can cache it
@@ -63,15 +77,33 @@ return require('packer').startup(function(use)
     use 'sbdchd/neoformat'
 
     -- completion
-    use 'hrsh7th/nvim-compe'
+    use 'hrsh7th/nvim-compe' -- deprecated
+
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-calc'
+    use 'hrsh7th/cmp-latex-symbols'
+    use {
+        'saecki/crates.nvim',
+        tag = 'v0.2.1',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('crates').setup()
+        end,
+    }
+    -- use 'hrsh7th/cmp-git'
+    -- use 'hrsh7th/cmp-omni'
+    -- use 'hrsh7th/cmp-emoji'
 
     -- fzf
     use 'nvim-telescope/telescope.nvim'
     use 'ahmedkhalf/project.nvim'
 
     -- snippets
-    use 'hrsh7th/vim-vsnip'
-    use 'hrsh7th/vim-vsnip-integ'
+    use 'L3MON4D3/LuaSnip'
+    use 'rafamadriz/friendly-snippets'
 
     -- commenting
     use 'terrortylor/nvim-comment'
