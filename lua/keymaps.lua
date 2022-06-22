@@ -5,6 +5,9 @@ vim.g.mapleader = ' '
 -- close window (L + L)
 vim.api.nvim_set_keymap('n', '<Leader><Leader>', ':q<CR>', { noremap = true, silent = true })
 
+-- close buffer (L + c)
+vim.api.nvim_set_keymap('n', '<Leader>c', ':bd<CR>', { noremap = true, silent = true })
+
 -- write changes (L + w)
 vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
 
