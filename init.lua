@@ -29,6 +29,7 @@ require('plugin-configs.cursorhold')
 require('plugin-configs.trouble')
 require('plugin-configs.project')
 require('plugin-configs.comment')
+require('plugin-configs.null-ls')
 
 -- TODO: list of plugins yet to configure
 require('plugin-configs.toggleterm')

@@ -32,11 +32,15 @@ vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', 'kj', '<ESC>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { noremap = true, silent = true })
 
--- code actions (L + .)
-vim.api.nvim_set_keymap('n', '<Leader>.', ':lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
 
--- lsp jump to definition (L + g)
-vim.api.nvim_set_keymap('n', '<Leader>g', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+-- lsp
+--
+-- - code actions (L + .)
+vim.api.nvim_set_keymap('n', '<Leader>.', ':lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
+-- - jump to definition (L + lj)
+vim.api.nvim_set_keymap('n', '<Leader>lj', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+-- - formatting (L + lf)
+vim.api.nvim_set_keymap('n', '<Leader>lf', ':lua vim.lsp.buf.formatting()<CR>', { noremap = true, silent = true })
 
 -- tab switch buffer (tab)
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { noremap = true, silent = true })
@@ -53,7 +57,6 @@ vim.api.nvim_set_keymap('n', '<Leader>fb',  ':Telescope buffers<CR>',    { norem
 vim.api.nvim_set_keymap('n', '<Leader>man', ':Telescope help_tags<CR>',  { noremap = true, silent = true })  -- search through nvim manual
 vim.api.nvim_set_keymap('n', '<Leader>lo',  ':Telescope grep_string<CR>',{ noremap = true, silent = true })  -- list occurances of string under cursor
 vim.api.nvim_set_keymap('n', '<Leader>op',  ':Telescope projects<CR>',   { noremap = true, silent = true })  -- open project
---vim.api.nvim_set_keymap('n', '<Leader>fix',  [[:lua require('telescope.builtin').quickfix()<CR>]],   { noremap = true, silent = true })  -- list quickfixes available
 
 -- dashboard (L + d)
 vim.api.nvim_set_keymap('n', '<Leader>d',  ':Dashboard<CR>', { noremap = true, silent = true })

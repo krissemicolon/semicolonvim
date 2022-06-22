@@ -38,7 +38,7 @@ return require('packer').startup(function(use)
 
     -- file tree
     use 'kyazdani42/nvim-web-devicons'
-    use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons', config = function() require'nvim-tree'.setup {} end }
+    use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
 
     -- terminal
     use 'akinsho/toggleterm.nvim'
@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
     use 'glepnir/lspsaga.nvim'
     use 'folke/trouble.nvim'
     use 'williamboman/nvim-lsp-installer'
+    use 'jose-elias-alvarez/null-ls.nvim'
 
     -- formatter
     use 'sbdchd/neoformat'
