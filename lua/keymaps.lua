@@ -49,7 +49,8 @@ vim.api.nvim_set_keymap('n', '<Leader>sp',  ':Telescope live_grep<CR>',  { norem
 vim.api.nvim_set_keymap('n', '<Leader>fb',  ':Telescope buffers<CR>',    { noremap = true, silent = true })  -- list & search buffers
 vim.api.nvim_set_keymap('n', '<Leader>man', ':Telescope help_tags<CR>',  { noremap = true, silent = true })  -- search through nvim manual
 vim.api.nvim_set_keymap('n', '<Leader>lo',  ':Telescope grep_string<CR>',{ noremap = true, silent = true })  -- list occurances of string under cursor
-vim.api.nvim_set_keymap('n', '<Leader>qf',  [[:lua require('telescope.builtin').quickfix()<CR>]],   { noremap = true, silent = true })  -- list quickfixes available
+vim.api.nvim_set_keymap('n', '<Leader>op',  ':Telescope projects<CR>',   { noremap = true, silent = true })  -- open project
+--vim.api.nvim_set_keymap('n', '<Leader>fix',  [[:lua require('telescope.builtin').quickfix()<CR>]],   { noremap = true, silent = true })  -- list quickfixes available
 
 -- dashboard (L + d)
 vim.api.nvim_set_keymap('n', '<Leader>d',  ':Dashboard<CR>', { noremap = true, silent = true })

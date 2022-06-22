@@ -1,7 +1,8 @@
-vim.g.dashboard_default_executive = 'telescope'
+local home = os.getenv('HOME')
+local dash = require'dashboard'
 
 -- header
-vim.g.dashboard_custom_header = {
+dash.custom_header = {
     '',
     '',
     [[                __                   ]],
@@ -11,21 +12,25 @@ vim.g.dashboard_custom_header = {
     [[  /\ \  \ \___/  \ \_\ \_\ \_\ \_\   ]],
     [[  \ \/   \/__/    \/_/\/_/\/_/\/_/   ]],
     [[   \/                                ]],
+    '',
+    '',
 }
 
 -- options
-vim.g.dashboard_custom_section = {
-   a = { description = { "  Explorer          " }, command = "NvimTreeToggle" },
-   b = { description = { "  Search            " }, command = "lua require('telescope.builtin').live_grep()" },
-   c = { description = { "  Source Control    " }, command = "Neogit" },
-   d = { description = { "  Projects          " }, command = "Telescope projects" },
-   e = { description = { "  Plugins           " }, command = "PackerStatus" },
-   f = { description = { "  Configuration     " }, command = "Config" },
-   g = { description = { "  Colorscheme       " }, command = "lua require('telescope.builtin').colorscheme()" },
-   h = { description = { "  Quit              " }, command = "q" },
+dash.hide_statusline = false
+dash.hide_tabline = false
+
+-- Menu
+dash.custom_center = {
+    { icon = '  ', desc = 'Explorer       ', action = 'NvimTreeToggle',         shortcut = '    e  '    },
+    { icon = '  ', desc = 'Search         ', action = 'Telescope live_grep',    shortcut = '    s p'    },
+    { icon = '  ', desc = 'Source Control ', action = 'Neogit',                 shortcut = '    g g'    },
+    { icon = '  ', desc = 'Projects       ', action = 'Telescope projects',     shortcut = '    o p'    },
+    { icon = '  ', desc = 'Plugins        ', action = 'PackerStatus',           shortcut = '       '    },
+    { icon = '  ', desc = 'Configuration  ', action = 'Config',                 shortcut = '       '    },
+    { icon = '  ', desc = 'Colorscheme    ', action = 'Telescope colorscheme',  shortcut = '       '    },
+    { icon = '  ', desc = 'Quit           ', action = 'q',                      shortcut = '       '    },
 }
 
 -- footer
-vim.g.dashboard_custom_footer = {
-    'Granted, if you are a soydev you may think "I already can *"',
-}
+dash.custom_footer = { '◯  Do not disturb my circles' }
