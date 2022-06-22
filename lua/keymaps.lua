@@ -29,9 +29,11 @@ vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', 'kj', '<ESC>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { noremap = true, silent = true })
 
--- code actions ()
---lua vim.lsp.buf.code_action()
+-- code actions (L + .)
 vim.api.nvim_set_keymap('n', '<Leader>.', ':lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
+
+-- lsp jump to definition (L + g)
+vim.api.nvim_set_keymap('n', '<Leader>g', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
 
 -- tab switch buffer (tab)
 vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { noremap = true, silent = true })
