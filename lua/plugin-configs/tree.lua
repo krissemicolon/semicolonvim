@@ -1,5 +1,3 @@
-vim.g.nvim_tree_respect_buf_cwd = 1
-
 require'nvim-tree'.setup {
   -- disables netrw completely
   disable_netrw       = true,
@@ -16,6 +14,7 @@ require'nvim-tree'.setup {
   hijack_cursor       = true,
   -- updates the root directory of the tree on `DirChanged` (when you run `:cd` usually)
   update_cwd          = true,
+  respect_buf_cwd     = true,
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
     enable = false,
