@@ -6,7 +6,7 @@ vim.cmd([[
     command! Lsp    execute ":LspInstallInfo"
     command! Profile execute ":LuaCacheProfile"
 
-    command! Repo   execute ":!brave `git config --get remote.origin.url`"
+    command! Repo   execute ":silent !brave `git config --get remote.origin.url`"
 
     command! Light  execute ":set background=light | lua text_selection()"
     command! Dark   execute ":set background=dark  | lua text_selection()"
