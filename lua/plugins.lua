@@ -77,8 +77,6 @@ return require('packer').startup(function(use)
     use 'sbdchd/neoformat'
 
     -- completion
-    use 'hrsh7th/nvim-compe' -- deprecated
-
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'

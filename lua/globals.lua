@@ -4,3 +4,5 @@ configpath = "~/.config/nvim"
 dotfilespath = "~/.dotfiles"
 -- language servers path
 lspath = "~/.config/nvim/ls"
+-- logseq path
+logseqpath = "~/Documents/Logseq/Documents"
