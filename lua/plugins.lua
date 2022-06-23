@@ -7,7 +7,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 --]]
 
-local status_ok, packer = pcall(require, "packer")
+local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
   return
 end
@@ -16,7 +16,7 @@ end
 packer.init {
   display = {
     open_fn = function()
-      return require("packer.util").float { border = "rounded" }
+      return require('packer.util').float { border = 'rounded' }
     end,
   },
 }
@@ -116,10 +116,12 @@ return require('packer').startup(function(use)
     -- colorscheme
     use 'morhetz/gruvbox'
     use 'sainnhe/everforest'
-    use 'gregsexton/Atom'
     use 'wimstefan/Lightning'
     use 'haystackandroid/carbonized'
-    use 'https://gitlab.com/yorickpeterse/happy_hacking.vim'
+    use 'tomasiser/vim-code-dark'
+    use 'savq/melange'
+    use { 'mcchrish/zenbones.nvim', requires = 'rktjmp/lush.nvim' }
+    use 'rebelot/kanagawa.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
