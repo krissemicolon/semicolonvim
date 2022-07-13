@@ -31,6 +31,7 @@ require('plugin-configs.project')
 require('plugin-configs.comment')
 require('plugin-configs.null-ls')
 require('plugin-configs.toggleterm')
+require('plugin-configs.autosave')
 
 -- TODO: list of plugins yet to configure
 --require('plugin-configs.which-key')
