@@ -8,8 +8,5 @@ null_ls.setup({
 
         -- diagnostics
         null_ls.builtins.diagnostics.eslint,
-
-        -- completion
-        null_ls.builtins.completion.spell,
     },
 })

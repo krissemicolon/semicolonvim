@@ -50,6 +50,8 @@ vim.api.nvim_set_keymap('x', 'K', [[:move '<-2<CR>gv-gv']], { noremap = true, si
 vim.api.nvim_set_keymap('x', 'J', [[:move '>+1<CR>gv-gv']], { noremap = true, silent = true })
 
 -- fuzzy finder (L + ff & L + sp & + fb & L + man & L + lo & L + qf)
+vim.api.nvim_set_keymap('n', '<C-Space>',  ':Telescope builtin<CR>', { noremap = true, silent = true })  -- list & search files
+
 vim.api.nvim_set_keymap('n', '<Leader>ff',  ':Telescope find_files<CR>', { noremap = true, silent = true })  -- list & search files
 vim.api.nvim_set_keymap('n', '<Leader>sp',  ':Telescope live_grep<CR>',  { noremap = true, silent = true })  -- search through project
 vim.api.nvim_set_keymap('n', '<Leader>fb',  ':Telescope buffers<CR>',    { noremap = true, silent = true })  -- list & search buffers
