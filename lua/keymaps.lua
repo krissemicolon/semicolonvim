@@ -7,6 +7,7 @@ vim.api.nvim_set_keymap('n', '<Leader><Leader>', ':q<CR>', { noremap = true, sil
 
 -- close buffer (L + c)
 vim.api.nvim_set_keymap('n', '<Leader>c', ':bd<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>ca', ':%bd|e#|bd#<CR>', { noremap = true, silent = true })
 
 -- write changes (L + w)
 vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
@@ -50,18 +51,19 @@ vim.api.nvim_set_keymap('x', 'K', [[:move '<-2<CR>gv-gv']], { noremap = true, si
 vim.api.nvim_set_keymap('x', 'J', [[:move '>+1<CR>gv-gv']], { noremap = true, silent = true })
 
 -- fuzzy finder (L + ff & L + sp & + fb & L + man & L + lo & L + qf)
-vim.api.nvim_set_keymap('n', '<C-Space>',  ':Telescope builtin<CR>', { noremap = true, silent = true })  -- list & search files
+vim.api.nvim_set_keymap('n', '<C-Space>', ':Telescope builtin<CR>', { noremap = true, silent = true }) -- list & search files
+vim.api.nvim_set_keymap('n', '<C-o>', ':Telescope projects<CR>', { noremap = true, silent = true }) -- open project
 
-vim.api.nvim_set_keymap('n', '<Leader>ff',  ':Telescope find_files<CR>', { noremap = true, silent = true })  -- list & search files
-vim.api.nvim_set_keymap('n', '<Leader>sp',  ':Telescope live_grep<CR>',  { noremap = true, silent = true })  -- search through project
-vim.api.nvim_set_keymap('n', '<Leader>fb',  ':Telescope buffers<CR>',    { noremap = true, silent = true })  -- list & search buffers
-vim.api.nvim_set_keymap('n', '<Leader>man', ':Telescope help_tags<CR>',  { noremap = true, silent = true })  -- search through nvim manual
-vim.api.nvim_set_keymap('n', '<Leader>lo',  ':Telescope grep_string<CR>',{ noremap = true, silent = true })  -- list occurances of string under cursor
-vim.api.nvim_set_keymap('n', '<Leader>op',  ':Telescope projects<CR>',   { noremap = true, silent = true })  -- open project
+vim.api.nvim_set_keymap('n', '<Leader>ff', ':Telescope find_files<CR>', { noremap = true, silent = true }) -- list & search files
+vim.api.nvim_set_keymap('n', '<Leader>sp', ':Telescope live_grep<CR>', { noremap = true, silent = true }) -- search through project
+vim.api.nvim_set_keymap('n', '<Leader>fb', ':Telescope buffers<CR>', { noremap = true, silent = true }) -- list & search buffers
+vim.api.nvim_set_keymap('n', '<Leader>man', ':Telescope help_tags<CR>', { noremap = true, silent = true }) -- search through nvim manual
+vim.api.nvim_set_keymap('n', '<Leader>lo', ':Telescope grep_string<CR>', { noremap = true, silent = true }) -- list occurances of string under cursor
+vim.api.nvim_set_keymap('n', '<Leader>op', ':Telescope projects<CR>', { noremap = true, silent = true }) -- open project
 
 -- dashboard (L + d)
-vim.api.nvim_set_keymap('n', '<Leader>d',  ':Dashboard<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>d', ':Dashboard<CR>', { noremap = true, silent = true })
 
 -- neogit (L + gg)
-vim.api.nvim_set_keymap('n', '<Leader>gg',  ':Neogit<CR>',        { noremap = true, silent = true })    -- git overview
-vim.api.nvim_set_keymap('n', '<Leader>gc',  ':Neogit commit<CR>', { noremap = true, silent = true })    -- commit
+vim.api.nvim_set_keymap('n', '<Leader>gg', ':Neogit<CR>', { noremap = true, silent = true }) -- git overview
+vim.api.nvim_set_keymap('n', '<Leader>gc', ':Neogit commit<CR>', { noremap = true, silent = true }) -- commit
