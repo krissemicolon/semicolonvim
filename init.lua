@@ -34,6 +34,7 @@ require('plugin-configs.autosave')
 require('plugin-configs.lsp-lines')
 require('plugin-configs.crates')
 require('plugin-configs.mason')
+require('plugin-configs.autopairs')
 
 -- Disabled
 -- null ls is disabled because of mason.nvim's extensive formatter support 

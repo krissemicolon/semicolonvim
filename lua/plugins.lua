@@ -67,6 +67,9 @@ return require('packer').startup(function(use)
     -- treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
+    -- automatic pairs
+    use "windwp/nvim-autopairs"
+
     -- lsp
     use {
         "williamboman/mason.nvim",
