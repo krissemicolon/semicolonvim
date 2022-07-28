@@ -2,19 +2,22 @@
 vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 
--- close window (L + L)
-vim.api.nvim_set_keymap('n', '<Leader><Leader>', ':q<CR>', { noremap = true, silent = true })
+-- README: L stands for the Leader Key not shift + l
 
 -- close current buffer (L + c)
 vim.api.nvim_set_keymap('n', '<Leader>c', ':bd<CR>', { noremap = true, silent = true })
--- close all buffers (L + ca)
-vim.api.nvim_set_keymap('n', '<Leader>ca', ':%bd|e#|bd#<CR>', { noremap = true, silent = true })
+
+-- close all buffers (ctrl + escape)
+vim.api.nvim_set_keymap('n', '<C-_>', ':%bd|e#|bd#<CR>', { noremap = true, silent = true })
 
 -- write changes (L + w)
 vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
 
--- no highlighting (L + h)
-vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true })
+-- quit focused (L + q)
+vim.api.nvim_set_keymap('n', '<Leader>q', ':q<CR>', { noremap = true, silent = true })
+
+-- no highlighting/marking (L + m)
+vim.api.nvim_set_keymap('n', '<Leader>m', ':set hlsearch!<CR>', { noremap = true, silent = true })
 
 -- explorer (L + e)
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
@@ -34,6 +37,9 @@ vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', 'kj', '<ESC>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', 'jj', '<ESC>', { noremap = true, silent = true })
 
+-- escape visual (L)
+vim.api.nvim_set_keymap('v', '<Leader>', '<ESC>', { noremap = true, silent = true })
+
 -- lsp
 --
 -- - code actions (L + .)
@@ -42,17 +48,25 @@ vim.api.nvim_set_keymap('n', '<Leader>.', ':lua vim.lsp.buf.code_action()<CR>', 
 vim.api.nvim_set_keymap('n', '<Leader>lj', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
 -- - formatting (L + lf)
 vim.api.nvim_set_keymap('n', '<Leader>lf', ':lua vim.lsp.buf.formatting()<CR>', { noremap = true, silent = true })
+-- help/hover doc (L + h)
+vim.api.nvim_set_keymap('n', '<Leader>h', ':Lspsaga hover_doc<CR>', { noremap = true, silent = true })
+-- toggle diagnostic virtual text (L + ld)
+vim.keymap.set( "n", "<Leader>ld", require"lsp_lines".toggle, { noremap = true, silent = true })
 
--- tab switch buffer (tab)
-vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', { noremap = true, silent = true })
+-- tab switch buffer (tab/s-tab)
+vim.api.nvim_set_keymap('n', '<TAB>', ':BufferLineCycleNext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<S-TAB>', ':BufferLineCyclePrev<CR>', { noremap = true, silent = true })
+
+-- move tab in bar (alt + tab/s-tab)
+vim.api.nvim_set_keymap('n', '<C-TAB>', ':BufferLineMoveNext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-S-TAB>', ':BufferLineMovePrev<CR>', { noremap = true, silent = true })
 
 -- move selected line / block of text in visual mode ([visual] shift + (J || K))
 vim.api.nvim_set_keymap('x', 'K', [[:move '<-2<CR>gv-gv']], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('x', 'J', [[:move '>+1<CR>gv-gv']], { noremap = true, silent = true })
 
 -- fuzzy finder (L + ff & L + sp & + fb & L + man & L + lo & L + qf)
-vim.api.nvim_set_keymap('n', '<C-Space>', ':Telescope builtin<CR>', { noremap = true, silent = true }) -- list & search files
+vim.api.nvim_set_keymap('n', '<C-Space>', ':Telescope find_files<CR>', { noremap = true, silent = true }) -- list & search files
 vim.api.nvim_set_keymap('n', '<C-o>', ':Telescope projects<CR>', { noremap = true, silent = true }) -- open project
 
 vim.api.nvim_set_keymap('n', '<Leader>ff', ':Telescope find_files<CR>', { noremap = true, silent = true }) -- list & search files
@@ -67,4 +81,4 @@ vim.api.nvim_set_keymap('n', '<Leader>d', ':Dashboard<CR>', { noremap = true, si
 
 -- neogit (L + gg)
 vim.api.nvim_set_keymap('n', '<Leader>gg', ':Neogit<CR>', { noremap = true, silent = true }) -- git overview
-vim.api.nvim_set_keymap('n', '<Leader>gc', ':Neogit commit<CR>', { noremap = true, silent = true }) -- commit
+vim.api.nvim_set_keymap('n', '<C-g>', ':Neogit<CR>', { noremap = true, silent = true }) -- git overview

@@ -103,11 +103,11 @@ cmp.setup {
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         luasnip = "[Snippet]",
-        buffer = "[Buffer]",
+        crates = "[Crate]",
+        latex_symbols = "[LaTeX]",
         path = "[Path]",
         calc = "[Math]",
-        crates = "[Crate]",
-        latex_symbols = "[LaTeX]"
+        buffer = "[Buffer]",
       })[entry.source.name]
       return vim_item
     end,

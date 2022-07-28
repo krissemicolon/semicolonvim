@@ -1,5 +1,6 @@
--- changing defaults
-vim.notify = require("notify")
+-- setup notify plugin needs to be done first
+-- README: Comment this out when opening for first time
+vim.notify = require"notify"
 
 -- importing modules
 require('globals')
@@ -10,6 +11,7 @@ require('settings')
 require('colorscheme')
 require('highlights')
 require('commands')
+require('autocommands')
 
 require('plugin-configs.tree')
 require('plugin-configs.cmp')
@@ -19,7 +21,6 @@ require('plugin-configs.neogit')
 require('plugin-configs.impatient')
 require('plugin-configs.lspconfig')
 require('plugin-configs.lspsaga')
-require('plugin-configs.lsp-installer')
 require('plugin-configs.lspkind')
 require('plugin-configs.presence')
 require('plugin-configs.telescope')
@@ -29,9 +30,12 @@ require('plugin-configs.cursorhold')
 require('plugin-configs.trouble')
 require('plugin-configs.project')
 require('plugin-configs.comment')
-require('plugin-configs.null-ls')
 require('plugin-configs.toggleterm')
 require('plugin-configs.autosave')
+require('plugin-configs.lsp-lines')
+require('plugin-configs.crates')
+require('plugin-configs.mason')
 
--- TODO: list of plugins yet to configure
---require('plugin-configs.which-key')
+-- Disabled
+-- null ls is disabled because of mason.nvim's extensive formatter support 
+--require('plugin-configs.null-ls')

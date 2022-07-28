@@ -4,7 +4,7 @@ vim.cmd([[
 
     command! Sync           execute ":PackerSync"
 
-    command! Lsp            execute ":LspInstallInfo"
+    command! Lsp            execute ":Mason"
     command! Profile        execute ":LuaCacheProfile"
     command! Repo           execute ":silent !]] .. browser .. [[ `git config --get remote.origin.url`"
     command! Journal        execute ":e ]] .. logseqpath .. [[/journals/]] .. os.date("%Y_%m_%d") .. [[.md"

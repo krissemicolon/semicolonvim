@@ -1,30 +1,30 @@
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 ---[[
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth=1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    packer_bootstrap = fn.system({ 'git', 'clone', '--depth=1', 'https://github.com/wbthomason/packer.nvim', install_path })
 end
 --]]
 
 local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
-  return
+    return
 end
 
 -- packer floating window
 packer.init {
-  display = {
-    open_fn = function()
-      return require('packer.util').float { border = 'rounded' }
-    end,
-  },
+    display = {
+        open_fn = function()
+            return require('packer.util').float { border = 'rounded' }
+        end,
+    },
 }
 
 return require('packer').startup(function(use)
     config = {
         -- Move to lua dir so impatient.nvim can cache it
-            compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
+        compile_path = vim.fn.stdpath('config') .. '/lua/packer_compiled.lua'
     }
 
     -- packer self management
@@ -34,10 +34,10 @@ return require('packer').startup(function(use)
     use 'lewis6991/impatient.nvim'
 
     -- misc
-    use 'antoinemadec/FixCursorHold.nvim'   -- otimizes cursor hold bug
+    use 'antoinemadec/FixCursorHold.nvim' -- otimizes cursor hold bug
     use { -- view keymaps
         'AckslD/nvim-whichkey-setup.lua',
-        requires = {'liuchengxu/vim-which-key'},
+        requires = { 'liuchengxu/vim-which-key' },
     }
     use 'ap/vim-css-color'
 
@@ -73,8 +73,9 @@ return require('packer').startup(function(use)
     use 'onsails/lspkind-nvim'
     use 'glepnir/lspsaga.nvim'
     use 'folke/trouble.nvim'
-    use 'williamboman/nvim-lsp-installer'
+    use 'williamboman/mason.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
+    use 'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
 
     -- formatter
     use 'sbdchd/neoformat'
@@ -89,10 +90,7 @@ return require('packer').startup(function(use)
     use {
         'saecki/crates.nvim',
         tag = 'v0.2.1',
-        requires = { 'nvim-lua/plenary.nvim' },
-        config = function()
-            require('crates').setup()
-        end,
+        requires = { 'nvim-lua/plenary.nvim' }
     }
     -- use 'hrsh7th/cmp-git'
     -- use 'hrsh7th/cmp-omni'
@@ -120,16 +118,15 @@ return require('packer').startup(function(use)
     use 'morhetz/gruvbox'
     use 'sainnhe/everforest'
     use 'wimstefan/Lightning'
-    use 'haystackandroid/carbonized'
     use 'tomasiser/vim-code-dark'
     use 'savq/melange'
     use { 'mcchrish/zenbones.nvim', requires = 'rktjmp/lush.nvim' }
     use 'rebelot/kanagawa.nvim'
     use 'AlphaTechnolog/pywal.nvim'
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require('packer').sync()
+    end
 end)
