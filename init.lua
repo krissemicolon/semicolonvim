@@ -1,13 +1,15 @@
--- setup notify plugin needs to be done first
--- README: Comment this out when opening for first time
-vim.notify = require"notify"
+-- notify setup: needs to be done first
+if(pcall(require, "notify")) then
+    vim.notify = require"notify"
+end
 
 -- importing modules
+require('gui')
 require('globals')
 require('plugins')
 require('plugin-configs')
 require('keymaps')
-require('settings')
+require('options')
 require('colorscheme')
 require('highlights')
 require('commands')

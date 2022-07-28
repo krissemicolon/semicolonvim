@@ -111,7 +111,7 @@ return require('packer').startup(function(use)
     use 'terrortylor/nvim-comment'
 
     -- notifications / error messages
-    use 'rcarriga/nvim-notify'
+    -- use 'rcarriga/nvim-notify'
 
     -- git
     use {

@@ -11,6 +11,6 @@
                                    
 </pre>
 
-> a pure lua neovim configuration
+> my personal neovim text editor configuration
 
 ![alt text](assets/img.png)
