@@ -68,17 +68,17 @@ return require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- lsp
-    use 'neovim/nvim-lspconfig'
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
+    }
     use 'ray-x/lsp_signature.nvim'
     use 'onsails/lspkind-nvim'
     use 'glepnir/lspsaga.nvim'
     use 'folke/trouble.nvim'
-    use 'williamboman/mason.nvim'
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
-
-    -- formatter
-    use 'sbdchd/neoformat'
 
     -- completion
     use 'hrsh7th/nvim-cmp'
@@ -111,7 +111,10 @@ return require('packer').startup(function(use)
     use 'rcarriga/nvim-notify'
 
     -- git
-    use 'lewis6991/gitsigns.nvim'
+    use {
+        'lewis6991/gitsigns.nvim',
+        tag = 'release'
+    }
     use 'TimUntersberger/neogit'
 
     -- colorscheme
