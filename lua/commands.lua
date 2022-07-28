@@ -6,8 +6,10 @@ vim.cmd([[
 
     command! Lsp            execute ":Mason"
     command! Profile        execute ":LuaCacheProfile"
-    command! Repo           execute ":silent !]] .. browser .. [[ `git config --get remote.origin.url`"
     command! Journal        execute ":e ]] .. logseqpath .. [[/journals/]] .. os.date("%Y_%m_%d") .. [[.md"
+
+    command! Repo           execute ":silent !]] .. browser .. [[ `git config --get remote.origin.url`"
+    command! Crate          execute ":silent !]] .. browser .. [[ https://crates.io/crates/$(basename `pwd`)"
 
     command! Light          execute ":set background=light | lua text_selection()"
     command! Dark           execute ":set background=dark  | lua text_selection()"
