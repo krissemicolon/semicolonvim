@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
     use 'akinsho/toggleterm.nvim'
 
     -- autosave
-    use 'Pocco81/AutoSave.nvim'
+    use 'Pocco81/auto-save.nvim'
 
     -- tabs/buffers
     -- alternatives: ['romgrk/barbar.nvim']

@@ -43,7 +43,7 @@ vim.api.nvim_set_keymap('v', '<Leader>', '<ESC>', { noremap = true, silent = tru
 -- lsp
 --
 -- - code actions (L + .)
-vim.api.nvim_set_keymap('n', '<Leader>.', ':lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>.', ':Lspsaga code_action<CR>', { noremap = true, silent = true })
 -- - jump to definition (L + lj)
 vim.api.nvim_set_keymap('n', '<Leader>lj', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
 -- - formatting (L + lf)

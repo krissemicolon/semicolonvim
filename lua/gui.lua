@@ -13,5 +13,6 @@ if exists("g:neovide")
 
     " for pasting in neovide (middle click)
     :set guioptions+=a
+    :set guifont=DaddyTimeMono\ Nerd\ Font
 endif
 ]])
