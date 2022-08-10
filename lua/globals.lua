@@ -1,5 +1,7 @@
 -- config path
 configpath = "~/.config/nvim"
+-- scripts path
+scriptspath = configpath .. "/scripts"
 -- dotfiles path
 dotfilespath = "~/.dotfiles"
 -- language servers path
